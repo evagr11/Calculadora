@@ -3,10 +3,10 @@
 </div>
 
 <div align="center">
-  <a href="https://github.com/evagr11/calculadora" target="_blank">
+  <a href="https://github.com/evagr11/Calculadora" target="_blank">
     <img src="https://img.shields.io/badge/Ver_Código-333333?style=for-the-badge&logo=github&logoColor=white" alt="Ver Código"/>
   </a>
-  <a href="https://github.com/evagr11/calculadora/tree/main/docs" target="_blank">
+  <a href="https://evagr11.github.io/Calculadora/" target="_blank">
     <img src="https://img.shields.io/badge/Javadoc-FF9F0A?style=for-the-badge&logo=openjdk&logoColor=white" alt="Javadoc"/>
   </a>
   <img src="https://img.shields.io/badge/Estado-Terminado-A5A5A5?style=for-the-badge" alt="Estado"/>
@@ -15,7 +15,7 @@
 <br>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF9F0A&center=true&vCenter=true&width=600&lines=JavaFX+%2B+FXML+%2B+Maven;Modelo+%E2%86%94+Vista+%E2%86%94+Controlador;Pruebas+unitarias+con+JUnit+5;Documentado+con+Javadoc" alt="Typing SVG"/>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=18&duration=3500&pause=800&color=FF9F0A&center=true&vCenter=true&width=600&lines=JavaFX+%2B+FXML+%2B+Maven;Modelo+%E2%86%94+Vista+%E2%86%94+Controlador;Pruebas+unitarias+con+JUnit+5;Documentado+con+Javadoc" alt="Typing SVG"/></a>
 </div>
 
 ---
@@ -35,7 +35,7 @@ La interfaz está definida en **FXML** y tiene un diseño oscuro con botones red
 - 🎯 **Resultados limpios**: los enteros se muestran sin `.0` y los decimales se redondean a 8 cifras, así no aparecen cosas como `0.30000000000000004`.
 - 📏 **Límite de 10 caracteres** para que el número siempre quepa en la pantalla.
 - ✅ **Pruebas unitarias** del modelo con **JUnit 5**.
-- 📖 **Documentación Javadoc** generada en la carpeta `docs/`.
+- 📖 **Documentación Javadoc** generada en la carpeta `docs/` y publicada en [GitHub Pages](https://evagr11.github.io/Calculadora/).
 
 ---
 
@@ -93,10 +93,10 @@ Cada botón de operación guarda su símbolo en `userData` (`+`, `-`, `*`, `/`).
 # 📂 Estructura del Proyecto
 
 ```bash
-calculadora/
+Calculadora/
 │
 ├── pom.xml
-├── docs/                          # Javadoc generado
+├── docs/                          # Javadoc generado (publicado en GitHub Pages)
 │
 └── src/
     ├── main/
@@ -154,7 +154,7 @@ calculadora/
 
 ---
 
-# 🚀 Cómo Ejecutarlo
+# 🚀 Cómo Utilizar el Proyecto
 
 ### 📋 Requisitos
 
@@ -164,8 +164,8 @@ calculadora/
 ### ▶️ Ejecutar la aplicación
 
 ```bash
-git clone https://github.com/evagr11/calculadora.git
-cd calculadora
+git clone https://github.com/evagr11/Calculadora.git
+cd Calculadora
 mvn clean javafx:run
 ```
 
@@ -187,7 +187,7 @@ mvn test
 
 ### 📖 Ver la documentación
 
-Abre `docs/index.html` en el navegador para consultar el **Javadoc** de todas las clases.
+Consulta el **Javadoc** de todas las clases online en **[evagr11.github.io/Calculadora](https://evagr11.github.io/Calculadora/)**, o abre `docs/index.html` en el navegador si tienes el proyecto clonado.
 
 ---
 
@@ -208,6 +208,7 @@ Abre `docs/index.html` en el navegador para consultar el **Javadoc** de todas la
 
 - ⌨️ Manejar la calculadora con el teclado
 - 🔙 Botón para borrar el último dígito
+- 📏 Ajustar los resultados muy grandes al límite de 10 caracteres de la pantalla
 - ➗ Operaciones extra: porcentaje, cambio de signo (`±`) y raíz cuadrada
 - 🎨 Llevar los estilos a una hoja **CSS** externa
 - 🧪 Pruebas del controlador con **TestFX**
@@ -215,9 +216,15 @@ Abre `docs/index.html` en el navegador para consultar el **Javadoc** de todas la
 ---
 
 <div align="center">
+  <p>Creado por <strong>Eva Gallardo</strong></p>
+  <a href="https://github.com/evagr11" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/eva-gallardo-romero-830362349/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+</div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:333333,100:FF9F0A&height=100&section=footer" width="100%"/>
-
-✨ Proyecto creado por **Eva Gallardo** ✨
-
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:333333,100:FF9F0A&height=120&section=footer" width="100%"/>
 </div>
