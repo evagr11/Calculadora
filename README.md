@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:333333,100:FF9F0A&height=200&section=header&text=Calculadora&fontSize=60&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Calculadora%20de%20escritorio%20en%20JavaFX%20%7C%20Patr%C3%B3n%20MVC&descAlignY=55&descSize=18" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:333333,100:FF9F0A&height=200&section=header&text=Calculadora&fontSize=60&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Calculadora%20de%20escritorio%20en%20JavaFX%20%7C%20Rat%C3%B3n%20y%20teclado&descAlignY=55&descSize=18" width="100%"/>
 </div>
 
 <div align="center">
@@ -12,26 +12,36 @@
   <a href="https://evagr11.github.io/Calculadora/" target="_blank">
     <img src="https://img.shields.io/badge/Javadoc-FF9F0A?style=for-the-badge&logo=openjdk&logoColor=white" alt="Javadoc"/>
   </a>
-  <img src="https://img.shields.io/badge/Estado-Terminado-A5A5A5?style=for-the-badge" alt="Estado"/>
+  <a href="documentacion/Calculadora_II.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Documentación-A5A5A5?style=for-the-badge&logo=latex&logoColor=black" alt="Documentación"/>
+  </a>
+  <a href="https://www.figma.com/design/fG8BWf2mneEuCanVuY8ATo/Calculadora-JavaFX---Wireframe-y-Prototipo?node-id=1-2" target="_blank">
+    <img src="https://img.shields.io/badge/Figma-333333?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+  </a>
 </div>
 
 <br>
 
 <div align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=18&duration=3500&pause=800&color=FF9F0A&center=true&vCenter=true&width=600&lines=JavaFX+%2B+FXML+%2B+Maven;Modelo+%E2%86%94+Vista+%E2%86%94+Controlador;Pruebas+unitarias+con+JUnit+5;Documentado+con+Javadoc" alt="Typing SVG"/></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=18&duration=3500&pause=800&color=FF9F0A&center=true&vCenter=true&width=600&lines=JavaFX+%2B+FXML+%2B+Maven;Con+rat%C3%B3n+y+con+teclado;Modelo+%E2%86%94+Vista+%E2%86%94+Controlador;Pruebas+con+JUnit+5+y+Javadoc" alt="Typing SVG"/></a>
+</div>
+
+<div align="center">
+  <img src=".github/readme/mockup.jpg" alt="La calculadora en un portátil y una segunda ventana con un resultado, junto a las teclas 7 + 2 Enter" width="85%"/>
 </div>
 
 ---
 
 # 🧮 Sobre el Proyecto
 
-**Calculadora** es una aplicación de escritorio hecha en **JavaFX** que realiza las cuatro operaciones básicas: suma, resta, multiplicación y división.
+**Calculadora** es una aplicación de escritorio hecha en **JavaFX** que realiza las cuatro operaciones básicas: suma, resta, multiplicación y división. Se maneja **con el ratón y con el teclado**.
 
 La interfaz está definida en **FXML** y tiene un diseño oscuro con botones redondeados. La lógica está separada siguiendo el patrón **MVC**, de modo que el modelo que hace las cuentas no sabe nada de botones ni de ventanas.
 
 ✨ **Características principales:**
 
 - ➕ **Cuatro operaciones**: suma, resta, multiplicación y división.
+- ⌨️ **Uso con el teclado**: números (también del teclado numérico), operaciones, punto, `Enter` para el resultado y `Ctrl + C` para borrar.
 - 🔗 **Operaciones encadenadas**: si ya hay una operación pendiente, se calcula al pulsar el siguiente operador (`2 + 3 + 4` da `9`).
 - 🔢 **Números decimales**: el punto solo se puede añadir una vez por número.
 - 🚫 **División entre cero controlada**: el modelo lanza una `ArithmeticException` y la pantalla muestra `Error`.
@@ -44,9 +54,31 @@ La interfaz está definida en **FXML** y tiene un diseño oscuro con botones red
 
 # 🧠 Contexto del Proyecto
 
-Este proyecto es una práctica de la asignatura **Desarrollo de Interfaces** del segundo curso de **DAM** (Desarrollo de Aplicaciones Multiplataforma).
+Este proyecto es una práctica de la asignatura **Desarrollo de Interfaces** del segundo curso de **DAM** (Desarrollo de Aplicaciones Multiplataforma), hecha en dos tareas:
 
-El objetivo era construir una interfaz gráfica de escritorio con **JavaFX** partiendo del arquetipo **FXML de Maven** en **IntelliJ IDEA**. Además había que separar bien la vista, la lógica y el control de eventos, probar el código y documentarlo.
+<div align="center">
+
+| Tarea | Qué se hizo |
+| :---- | :---------- |
+| **006 – Calculadora** | Diseño (sketch, wireframe y prototipo) e implementación con JavaFX, MVC, JUnit y Javadoc |
+| **010 – Calculadora II** | Uso con el teclado: números, operaciones, resultado y `Ctrl + C` para borrar |
+
+</div>
+
+Todo está explicado en la [documentación en PDF](documentacion/Calculadora_II.pdf) (LaTeX): requisitos, diseño, estilo visual, implementación, pruebas y código.
+
+---
+
+# 🎨 Del boceto a la aplicación
+
+<table align="center">
+  <tr>
+    <td align="center" width="25%"><img src=".github/readme/boceto.jpg" alt="Sketch a mano de la calculadora" width="150"/><br><em>1. Sketch</em></td>
+    <td align="center" width="25%"><img src=".github/readme/wireframe.png" alt="Wireframe en grises" width="150"/><br><em>2. <a href="https://www.figma.com/design/fG8BWf2mneEuCanVuY8ATo/Calculadora-JavaFX---Wireframe-y-Prototipo">Wireframe</a></em></td>
+    <td align="center" width="25%"><img src=".github/readme/prototipo.png" alt="Prototipo con colores" width="150"/><br><em>3. <a href="https://www.figma.com/design/fG8BWf2mneEuCanVuY8ATo/Calculadora-JavaFX---Wireframe-y-Prototipo?node-id=1-2">Prototipo</a></em></td>
+    <td align="center" width="25%"><img src=".github/readme/inicio.png" alt="Calculadora hecha en JavaFX" width="150"/><br><em>4. JavaFX</em></td>
+  </tr>
+</table>
 
 ---
 
@@ -93,6 +125,26 @@ Cada botón de operación guarda su símbolo en `userData` (`+`, `-`, `*`, `/`).
 
 ---
 
+# ⌨️ Uso con el teclado
+
+<div align="center">
+
+| Tecla | Acción |
+| :---- | :----- |
+| `0`–`9` (normal o numérico) | Escribe el número |
+| `+` `-` `*` `/` | Elige la operación |
+| `.` o `,` | Punto decimal |
+| `Enter` o `=` | Muestra el resultado |
+| `Ctrl + C` | Borra, igual que el botón `C` |
+
+</div>
+
+`App` registra un manejador con `escena.setOnKeyPressed(...)` y le pasa cada tecla a `teclaPulsada` del controlador, que llama a los mismos métodos que los botones: el resultado es igual con el ratón que con el teclado. Se pone en la **escena** porque los eventos suben desde el nodo con el foco hasta la raíz, y los botones tienen `focusTraversable="false"` para que `Enter` no pulse uno por error.
+
+En el teclado español, `/`, `*` y `=` se escriben con **Mayúsculas** (`Mayús + 7`, `Mayús + +` y `Mayús + 0`), y el controlador las reconoce así; con otras distribuciones funcionan las teclas del teclado numérico.
+
+---
+
 # 📂 Estructura del Proyecto
 
 ```bash
@@ -100,6 +152,8 @@ Calculadora/
 │
 ├── pom.xml
 ├── docs/                          # Javadoc generado (publicado en GitHub Pages)
+├── documentacion/
+│   └── Calculadora_II.pdf         # Memoria de la práctica
 │
 └── src/
     ├── main/
@@ -125,8 +179,9 @@ Calculadora/
 <table align="center">
   <tr>
     <td align="center" valign="middle">
-      <img width="171" height="281" alt="Implementación de la calculadora en JavaFX" src="https://github.com/user-attachments/assets/37687eab-c54b-4dc4-b978-6c0559d4b074" />
-      <p><em>Implementación final de la calculadora</em></p>
+      <img width="171" alt="Calculadora mostrando el resultado de una operación" src=".github/readme/resultado.png"/>
+      <img width="171" alt="Calculadora mostrando Error al dividir entre cero" src=".github/readme/error.png"/>
+      <p><em>Resultado y división entre cero</em></p>
     </td>
     <td valign="middle">
       <table>
@@ -203,6 +258,10 @@ mvn test
 | `testDividir` | `5 ÷ 2 = 2.5` |
 | `testDividirEntreCeroDaError` | `5 ÷ 0` lanza `ArithmeticException` |
 
+<div align="center">
+  <img src=".github/readme/pruebas.png" alt="Las cinco pruebas de JUnit superadas en IntelliJ" width="70%"/>
+</div>
+
 ### 📖 Ver la documentación
 
 Consulta el **Javadoc** de todas las clases online en **[evagr11.github.io/Calculadora](https://evagr11.github.io/Calculadora/)**, o abre `docs/index.html` en el navegador si tienes el proyecto clonado.
@@ -211,11 +270,13 @@ Consulta el **Javadoc** de todas las clases online en **[evagr11.github.io/Calcu
 
 # 📚 Lo que aprendí con este proyecto
 
+- Diseñar una interfaz paso a paso: **sketch**, **wireframe** y **prototipo** en Figma
 - Crear interfaces de escritorio con **JavaFX** y **FXML**
 - Conectar la vista con el controlador mediante `fx:id`, `onAction` y `@FXML`
 - Aplicar el patrón **MVC** separando la lógica de la interfaz
 - Maquetar con `VBox` y `GridPane` usando `columnSpan`
 - Reutilizar un mismo manejador para varios botones con `userData`
+- Escuchar el teclado en la escena con `setOnKeyPressed`, `KeyCode` y `KeyCodeCombination`
 - Controlar errores con **excepciones** y mostrarlos al usuario
 - Evitar los problemas de precisión de los `double` al mostrar resultados
 - Escribir **pruebas unitarias** con JUnit 5 y documentar con **Javadoc**
@@ -224,8 +285,9 @@ Consulta el **Javadoc** de todas las clases online en **[evagr11.github.io/Calcu
 
 # 🎯 Mejoras futuras
 
-- ⌨️ Manejar la calculadora con el teclado
-- 🔙 Botón para borrar el último dígito
+- 🔙 Borrar el último dígito con un botón y con la tecla de retroceso
+- ⎋ `Esc` como atajo para borrar, además de `Ctrl + C`
+- ➕ Prioridad de operaciones: ahora `2 + 3 × 4` se calcula de izquierda a derecha y da `20`
 - 📏 Ajustar los resultados muy grandes al límite de 10 caracteres de la pantalla
 - ➗ Operaciones extra: porcentaje, cambio de signo (`±`) y raíz cuadrada
 - 🎨 Llevar los estilos a una hoja **CSS** externa

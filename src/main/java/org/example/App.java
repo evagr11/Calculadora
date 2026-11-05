@@ -9,34 +9,43 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Clase principal. Carga la VISTA (calculadora.fxml) y muestra la ventana.
+ * Clase principal. Carga la VISTA (calculadora.fxml), muestra la ventana
+ * y hace que la calculadora se pueda usar también con el teclado.
  *
  * @author Eva Gallardo Romero
  */
 public class App extends Application {
 
-    private static Scene scene;
-
+    /**
+     * Crea la ventana de la calculadora.
+     * Carga el FXML, recoge su controlador y le pasa cada tecla que se pulse
+     * en la ventana.
+     *
+     * @param stage ventana principal que crea JavaFX
+     * @throws IOException si no se puede cargar el archivo FXML
+     */
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("calculadora"));
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("calculadora.fxml"));
+        Parent raiz = loader.load();
+        CalculadoraController controlador = loader.getController();
+
+        Scene escena = new Scene(raiz);
+
+        escena.setOnKeyPressed(evento -> controlador.teclaPulsada(evento));
+
         stage.setTitle("Calculadora");
         stage.setResizable(false);
-        stage.setScene(scene);
+        stage.setScene(escena);
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    }
-
+    /**
+     * Punto de entrada del programa. Arranca la aplicación JavaFX.
+     *
+     * @param args argumentos de la línea de comandos (no se usan)
+     */
     public static void main(String[] args) {
         launch();
     }
-
 }
