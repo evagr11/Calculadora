@@ -48,6 +48,12 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>org.example.App</mainClass>
+                            <launcher>Calculadora</launcher>
+                            <jlinkImageName>Calculadora</jlinkImageName>
+                            <jlinkZipName>Calculadora-windows</jlinkZipName>
+                            <stripDebug>true</stripDebug>
+                            <noHeaderFiles>true</noHeaderFiles>
+                            <noManPages>true</noManPages>
                         </configuration>
                     </execution>
                 </executions>

@@ -6,6 +6,9 @@
   <a href="https://github.com/evagr11/Calculadora" target="_blank">
     <img src="https://img.shields.io/badge/Ver_Código-333333?style=for-the-badge&logo=github&logoColor=white" alt="Ver Código"/>
   </a>
+  <a href="https://github.com/evagr11/Calculadora/releases/latest" target="_blank">
+    <img src="https://img.shields.io/badge/Descargar_para_Windows-FF9F0A?style=for-the-badge&logo=windows&logoColor=white" alt="Descargar para Windows"/>
+  </a>
   <a href="https://evagr11.github.io/Calculadora/" target="_blank">
     <img src="https://img.shields.io/badge/Javadoc-FF9F0A?style=for-the-badge&logo=openjdk&logoColor=white" alt="Javadoc"/>
   </a>
@@ -156,7 +159,14 @@ Calculadora/
 
 # 🚀 Cómo Utilizar el Proyecto
 
-### 📋 Requisitos
+### 💻 Descargar para Windows
+
+No hace falta tener Java instalado: la descarga lleva su propia versión.
+
+1. Descarga `Calculadora-windows.zip` de la [última versión](https://github.com/evagr11/Calculadora/releases/latest) y descomprímelo.
+2. Abre la carpeta `bin` y haz doble clic en `Calculadora.bat` (si el Explorador oculta las extensiones, aparece como `Calculadora`).
+
+### 📋 Requisitos para compilarla
 
 - **JDK 11** o superior
 - **Maven** (o el Maven que trae IntelliJ IDEA)
@@ -170,6 +180,14 @@ mvn clean javafx:run
 ```
 
 En **IntelliJ IDEA** también se puede lanzar desde el panel de Maven: `Plugins → javafx → javafx:run`.
+
+### 📦 Generar el zip para Windows
+
+```bash
+mvn clean javafx:jlink
+```
+
+Crea `target/Calculadora-windows.zip`, con la aplicación y un Java reducido para ejecutarla. Se genera para el sistema donde se compila: hecho en Windows, funciona en Windows.
 
 ### ✅ Ejecutar las pruebas
 
@@ -212,6 +230,7 @@ Consulta el **Javadoc** de todas las clases online en **[evagr11.github.io/Calcu
 - ➗ Operaciones extra: porcentaje, cambio de signo (`±`) y raíz cuadrada
 - 🎨 Llevar los estilos a una hoja **CSS** externa
 - 🧪 Pruebas del controlador con **TestFX**
+- 📦 **Instalador `.exe`** con icono y acceso en el menú Inicio, con `jpackage`, en vez de abrirla con un `.bat`
 
 ---
 
