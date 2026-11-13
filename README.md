@@ -32,27 +32,27 @@
 
 ---
 
-# 🧮 Sobre el Proyecto
+# Sobre el Proyecto
 
 **Calculadora** es una aplicación de escritorio hecha en **JavaFX** que realiza las cuatro operaciones básicas: suma, resta, multiplicación y división. Se maneja **con el ratón y con el teclado**.
 
 La interfaz está definida en **FXML** y tiene un diseño oscuro con botones redondeados. La lógica está separada siguiendo el patrón **MVC**, de modo que el modelo que hace las cuentas no sabe nada de botones ni de ventanas.
 
-✨ **Características principales:**
+**Características principales:**
 
-- ➕ **Cuatro operaciones**: suma, resta, multiplicación y división.
-- ⌨️ **Uso con el teclado**: números (también del teclado numérico), operaciones, punto, `Enter` para el resultado y `Ctrl + C` para borrar.
-- 🔗 **Operaciones encadenadas**: si ya hay una operación pendiente, se calcula al pulsar el siguiente operador (`2 + 3 + 4` da `9`).
-- 🔢 **Números decimales**: el punto solo se puede añadir una vez por número.
-- 🚫 **División entre cero controlada**: el modelo lanza una `ArithmeticException` y la pantalla muestra `Error`.
-- 🎯 **Resultados limpios**: los enteros se muestran sin `.0` y los decimales se redondean a 8 cifras, así no aparecen cosas como `0.30000000000000004`.
-- 📏 **Límite de 10 caracteres** para que el número siempre quepa en la pantalla.
-- ✅ **Pruebas unitarias** del modelo con **JUnit 5**.
-- 📖 **Documentación Javadoc** generada en la carpeta `docs/` y publicada en [GitHub Pages](https://evagr11.github.io/Calculadora/).
+- **Cuatro operaciones**: suma, resta, multiplicación y división.
+- **Uso con el teclado**: números (también del teclado numérico), operaciones, punto, `Enter` para el resultado y `Ctrl + C` para borrar.
+- **Operaciones encadenadas**: si ya hay una operación pendiente, se calcula al pulsar el siguiente operador (`2 + 3 + 4` da `9`).
+- **Números decimales**: el punto solo se puede añadir una vez por número.
+- **División entre cero controlada**: el modelo lanza una `ArithmeticException` y la pantalla muestra `Error`.
+- **Resultados limpios**: los enteros se muestran sin `.0` y los decimales se redondean a 8 cifras, así no aparecen cosas como `0.30000000000000004`.
+- **Límite de 10 caracteres** para que el número siempre quepa en la pantalla.
+- **Pruebas unitarias** del modelo con **JUnit 5**.
+- **Documentación Javadoc** generada en la carpeta `docs/` y publicada en [GitHub Pages](https://evagr11.github.io/Calculadora/).
 
 ---
 
-# 🧠 Contexto del Proyecto
+# Contexto del Proyecto
 
 Este proyecto es una práctica de la asignatura **Desarrollo de Interfaces** del segundo curso de **DAM** (Desarrollo de Aplicaciones Multiplataforma), hecha en dos tareas:
 
@@ -69,7 +69,7 @@ Todo está explicado en la [documentación en PDF](documentacion/Calculadora_II.
 
 ---
 
-# 🎨 Del boceto a la aplicación
+# Del boceto a la aplicación
 
 <table align="center">
   <tr>
@@ -82,7 +82,7 @@ Todo está explicado en la [documentación en PDF](documentacion/Calculadora_II.
 
 ---
 
-# 🛠️ Stack Tecnológico
+# Stack Tecnológico
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java_11-333333?style=for-the-badge&logo=openjdk&logoColor=white"/>
@@ -108,16 +108,16 @@ Todo está explicado en la [documentación en PDF](documentacion/Calculadora_II.
 
 ---
 
-# 🧩 Arquitectura (MVC)
+# Arquitectura (MVC)
 
 <div align="center">
 
 | Capa | Archivo | Responsabilidad |
 |------|---------|-----------------|
-| 🟠 **Modelo** | `Calculadora.java` | Las cuatro operaciones. Lanza una excepción al dividir entre 0 |
-| ⚫ **Vista** | `calculadora.fxml` | Pantalla (`Label`) y botonera en un `GridPane` de 4 × 5 |
-| ⚪ **Controlador** | `CalculadoraController.java` | Recoge los clics, guarda el estado y llama al modelo |
-| ▶️ **Arranque** | `App.java` | Carga el FXML y abre una ventana de tamaño fijo |
+| **Modelo** | `Calculadora.java` | Las cuatro operaciones. Lanza una excepción al dividir entre 0 |
+| **Vista** | `calculadora.fxml` | Pantalla (`Label`) y botonera en un `GridPane` de 4 × 5 |
+| **Controlador** | `CalculadoraController.java` | Recoge los clics, guarda el estado y llama al modelo |
+| **Arranque** | `App.java` | Carga el FXML y abre una ventana de tamaño fijo |
 
 </div>
 
@@ -125,7 +125,7 @@ Cada botón de operación guarda su símbolo en `userData` (`+`, `-`, `*`, `/`).
 
 ---
 
-# ⌨️ Uso con el teclado
+# Uso con el teclado
 
 <div align="center">
 
@@ -145,7 +145,7 @@ En el teclado español, `/`, `*` y `=` se escriben con **Mayúsculas** (`Mayús 
 
 ---
 
-# 📂 Estructura del Proyecto
+# Estructura del Proyecto
 
 ```bash
 Calculadora/
@@ -174,7 +174,7 @@ Calculadora/
 
 ---
 
-# 🖥️ Interfaz
+# Interfaz
 
 <table align="center">
   <tr>
@@ -212,21 +212,21 @@ Calculadora/
 
 ---
 
-# 🚀 Cómo Utilizar el Proyecto
+# Cómo Utilizar el Proyecto
 
-### 💻 Descargar para Windows
+### Descargar para Windows
 
 No hace falta tener Java instalado: la descarga lleva su propia versión.
 
 1. Descarga `Calculadora-windows.zip` de la [última versión](https://github.com/evagr11/Calculadora/releases/latest) y descomprímelo.
 2. Abre la carpeta `bin` y haz doble clic en `Calculadora.bat` (si el Explorador oculta las extensiones, aparece como `Calculadora`).
 
-### 📋 Requisitos para compilarla
+### Requisitos para compilarla
 
 - **JDK 11** o superior
 - **Maven** (o el Maven que trae IntelliJ IDEA)
 
-### ▶️ Ejecutar la aplicación
+### Ejecutar la aplicación
 
 ```bash
 git clone https://github.com/evagr11/Calculadora.git
@@ -236,7 +236,7 @@ mvn clean javafx:run
 
 En **IntelliJ IDEA** también se puede lanzar desde el panel de Maven: `Plugins → javafx → javafx:run`.
 
-### 📦 Generar el zip para Windows
+### Generar el zip para Windows
 
 ```bash
 mvn clean javafx:jlink
@@ -244,7 +244,7 @@ mvn clean javafx:jlink
 
 Crea `target/Calculadora-windows.zip`, con la aplicación y un Java reducido para ejecutarla. Se genera para el sistema donde se compila: hecho en Windows, funciona en Windows.
 
-### ✅ Ejecutar las pruebas
+### Ejecutar las pruebas
 
 ```bash
 mvn test
@@ -262,13 +262,13 @@ mvn test
   <img src=".github/readme/pruebas.png" alt="Las cinco pruebas de JUnit superadas en IntelliJ" width="70%"/>
 </div>
 
-### 📖 Ver la documentación
+### Ver la documentación
 
 Consulta el **Javadoc** de todas las clases online en **[evagr11.github.io/Calculadora](https://evagr11.github.io/Calculadora/)**, o abre `docs/index.html` en el navegador si tienes el proyecto clonado.
 
 ---
 
-# 📚 Lo que aprendí con este proyecto
+# Lo que aprendí con este proyecto
 
 - Diseñar una interfaz paso a paso: **sketch**, **wireframe** y **prototipo** en Figma
 - Crear interfaces de escritorio con **JavaFX** y **FXML**
@@ -282,17 +282,6 @@ Consulta el **Javadoc** de todas las clases online en **[evagr11.github.io/Calcu
 - Escribir **pruebas unitarias** con JUnit 5 y documentar con **Javadoc**
 
 ---
-
-# 🎯 Mejoras futuras
-
-- 🔙 Borrar el último dígito con un botón y con la tecla de retroceso
-- ⎋ `Esc` como atajo para borrar, además de `Ctrl + C`
-- ➕ Prioridad de operaciones: ahora `2 + 3 × 4` se calcula de izquierda a derecha y da `20`
-- 📏 Ajustar los resultados muy grandes al límite de 10 caracteres de la pantalla
-- ➗ Operaciones extra: porcentaje, cambio de signo (`±`) y raíz cuadrada
-- 🎨 Llevar los estilos a una hoja **CSS** externa
-- 🧪 Pruebas del controlador con **TestFX**
-- 📦 **Instalador `.exe`** con icono y acceso en el menú Inicio, con `jpackage`, en vez de abrirla con un `.bat`
 
 ---
 
